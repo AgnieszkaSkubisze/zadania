@@ -3,32 +3,32 @@
 //wykorzystaj fory i switche (lub niestandardowe) 
 
 
-function arrayReturning(){
+function arrayReturning() {
 
-    tab1 =[]
+    tab1 = []
 
     for (let i = 1; i < 101; i++) {
-       
+
         if (i === 10 || i === 20 || i === 30 || i === 40 || i === 50) {
-            switch(i) {
+            switch (i) {
                 case 10:
-                tab1.push({id:i,value:false})
-                break
+                    tab1.push({ id: i, value: false })
+                    break
                 case 20:
-                tab1.push({id:i,value:false})
-                break
+                    tab1.push({ id: i, value: false })
+                    break
                 case 30:
-                tab1.push({id:i,value:false})
-                break
+                    tab1.push({ id: i, value: false })
+                    break
                 case 40:
-                tab1.push({id:i,value:false})
-                break
+                    tab1.push({ id: i, value: false })
+                    break
                 case 50:
-                tab1.push({id:i,value:false})
-                break
+                    tab1.push({ id: i, value: false })
+                    break
             }
         } else {
-            tab1.push({id:i,value:true})
+            tab1.push({ id: i, value: true })
         }
     }
 

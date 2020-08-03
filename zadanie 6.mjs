@@ -9,29 +9,29 @@ tab1 = ['ala', 'lukasz', 'agnieszka', 'bozena', 'slawek']
 tab2 = ['ala', 'grzegorz', 'monika', 'bozena', 'slawek']
 tab3 = []
 
-function similarNames(tab1,tab2){
+function similarNames(tab1, tab2) {
 
-    if (typeof tab1 !== 'object'  || typeof tab2 !== 'object') {
+    if (typeof tab1 !== 'object' || typeof tab2 !== 'object') {
         return false
-    }   else if (tab1.length !== tab2.length) {
+    } else if (tab1.length !== tab2.length) {
         return false
-    }   else if (tab1.length > 5 || tab2.length > 5) {
+    } else if (tab1.length > 5 || tab2.length > 5) {
         return false
-    }   else  {
+    } else {
         for (let i = 0; i < tab1.length; i++) {
             for (let j = 0; j < tab2.length; j++) {
-            let sameName = tab1[i] === tab2[j];
-                if(sameName) {
-                    switch(tab1[i]) {
+                let sameName = tab1[i] === tab2[j];
+                if (sameName) {
+                    switch (tab1[i]) {
                         case 'ala':
-                        tab3.push({'imie': tab1[i],'rodzaj':1})
-                        break
+                            tab3.push({ 'imie': tab1[i], 'rodzaj': 1 })
+                            break
                         case 'bozena':
-                        tab3.push({'imie': tab1[i], 'rodzaj':2})    
-                        break
+                            tab3.push({ 'imie': tab1[i], 'rodzaj': 2 })
+                            break
                         case 'slawek':
-                        tab3.push({'imie': tab1[i], 'rodzaj':3})    
-                        break
+                            tab3.push({ 'imie': tab1[i], 'rodzaj': 3 })
+                            break
                     }
                 }
             }
@@ -39,4 +39,4 @@ function similarNames(tab1,tab2){
     }
     return tab3
 }
-console.log(similarNames(tab1,tab2))
+console.log(similarNames(tab1, tab2))
