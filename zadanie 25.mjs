@@ -1,40 +1,25 @@
-//mamy tablice ['ala','ala','ala','ola','ola',ola',ola''aga','aga','aga'] wynikiem ma byc nowa
-//tablica ['ala',ola','aga'] 
+//Mamy tablice ['ala','ala','ala','ola','ola',ola',ola''aga','aga','aga'] wynikiem ma byc nowa
+//tablica w ktorej zapisujemy rozne imiona, a powtorzenia beda podmieniane na przykaldowe imie  
 
-tab1 = ['ala', 'ala', 'ala', 'ola', 'ola', 'ola', 'ola', 'aga', 'aga', 'aga']
+tab1 = ['ala', 'ala', 'ala', 'ala', 'ala', 'ola', 'ola', 'ola', 'ola', 'aga', 'aga', 'aga']
+
+
 
 function makeItClean(tab1) {
-
-
     tab2 = []
-
 
     for (let i = 0; i < tab1.length; i++) {
 
-        let indexInTab = tab2.indexOf(tab1[i])
+        let drugieImie = 'zosia'
+        let name = tab1[i]
 
-        switch (tab1[i]) {
 
-            case 'ala':
-                if (indexInTab === -1)
-                    tab2.push(tab1[i])
-                else { tab2.push('zosia') }
-                break
-            case 'ola':
-                if (indexInTab === -1)
-                    tab2.push(tab1[i])
-                else { tab2.push('zosia') }
-                break
-            case 'aga':
-                if (indexInTab === -1)
-                    tab2.push(tab1[i])
-                else { tab2.push('zosia') }
-                break
+        if (tab2.includes(name)) {
+            tab2.push(drugieImie)
+        } else {
+            tab2.push(tab1[i])
         }
-
     }
-
     return tab2
-
 }
 console.log(makeItClean(tab1))
