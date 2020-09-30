@@ -2,7 +2,7 @@
 //tablica w ktorej zapisujemy rozne zwierzeta, parzyste pierwsze wystapienia beda zapisywane z duzych liter, nieparzyste pierwsze wystapienia beda zapisywane normlanie, 
 //powtorzenia 'kozy' beda zamieniane na 'cap', powtorzenia owcy na 'baran' a powtorzenia krowy na 'byk'
 
-//ma wygladac tak :['koza','cap','KOZA','cap','OWCA','owca','baran','baran','baran','krowa','KROWA','byk']
+//porzadany wynik : ['KOZA','cap','cap','cap','OWCA','baran','baran','baran','baran','krowa','byk','byk']
 
 
 animals = ['koza', 'koza', 'koza', 'koza', 'owca', 'owca', 'owca', 'owca', 'owca', 'krowa', 'krowa', 'krowa']
