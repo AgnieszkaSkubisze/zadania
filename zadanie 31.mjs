@@ -2,11 +2,14 @@
 //najmniejszej i usunac dupikaty i usunac wszystko co nie jest liczba 
 tab1 = [4, 2, 5, 7, 'ala', 8, 9, 1, 0, 4, 'kasia', 5, 7, 8, 8]
 
+function compareNumber(a, b) {
+    return a - b
+}
 
 function makeItClean(tab1) {
     tab2 = []
 
-    let letSortIt = tab1.sort()
+    let letSortIt = tab1.sort(compareNumber)
     let reverseMyTab = letSortIt.reverse()
 
     for (let i = 0; i < tab1.length; i++) {

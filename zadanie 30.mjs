@@ -1,11 +1,14 @@
 //  Tablica skladajaca sie z liczb [4,2,5,7,8,9,1,0,4,5,7,8,8] wynikiem ma byc tablica posortowana od najmniejszej do najwiekszej i usunac dupikaty 
 tab1 = [4, 2, 5, 7, 8, 9, 1, 0, 4, 5, 7, 8, 8]
 
+function compareNumber(a, b) {
+    return a - b
+}
 
 function makeItClean(tab1) {
     tab2 = []
 
-    let letSortIt = tab1.sort()
+    let letSortIt = tab1.sort(compareNumber)
 
 
     for (let i = 0; i < tab1.length; i++) {

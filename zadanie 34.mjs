@@ -3,7 +3,9 @@
 
 tab1 = [4, 2, 5, 7, 8, 9, 1, 'ala', 'ala', 'ala', 'ola', 0, 'kasia', 4, 5, 'zosia', 7, 8, 8]
 
-
+function compareNumber(a, b) {
+    return a - b
+}
 
 function onlyStrings(tab1) {
 
@@ -32,7 +34,7 @@ function onlyNubers(tab1) {
             onlyNumbersTab.push(tab1[i])
         }
     }
-    onlyNumbersTab.sort()
+    onlyNumbersTab.sort(compareNumber)
 
     return onlyNumbersTab
 

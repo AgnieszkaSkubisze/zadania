@@ -3,7 +3,9 @@
 
 tab1 = [4, 2, 5, 7, 8, 9, 1, 0, 4, 5, 7, 8, 8]
 
-
+function compareNumber(a, b) {
+    return a - b
+}
 
 function cleaningFunction(tab1) {
     let tabWithouReply = []
@@ -34,7 +36,7 @@ function oddOne(cleanTab) {
         if (ourNumber % 2 == 0) {
             tabOdd.push(ourNumber)
         }
-        tabOdd.sort()
+        tabOdd.sort(compareNumber)
     }
     return tabOdd
 }

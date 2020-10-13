@@ -3,6 +3,10 @@
 
 tab1 = [4, 2, 5, 7, 8, 9, 1, 'ala', 'ala', 'ala', 'ola', 0, 'kasia', 4, 5, 'zosia', 7, 8, 8]
 
+function compareNumber(a, b) {
+    return a - b
+}
+
 function hardOne(zmienna, tab1) {
 
     tabOnly = []
@@ -14,7 +18,7 @@ function hardOne(zmienna, tab1) {
             tabOnly.push(tab1[i])
         } else if (zmienna === 'number' && typeof tab1[i] == 'number' && (!tabOnly.includes(tab1[i]))) {
             tabOnly.push(tab1[i])
-            tabOnly.sort()
+            tabOnly.sort(compareNumber)
 
         }
     }
