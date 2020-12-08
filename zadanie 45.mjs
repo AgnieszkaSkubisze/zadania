@@ -35,23 +35,33 @@ class howMuchCashUHave {
     canIAffortIt(incomes, outcomes) {
         const checkIfUCanAffordIt = this.countings(incomes, outcomes)
         this.budget = checkIfUCanAffordIt
-        return this.budget
+
     }
 
     countings(incomes, outcomes) {
-
+        let comunication = ""
+        let ammountOFMoney = incomes - outcomes
         for (let i = 0; i < this.tabWithCars.length; i++) {
-            let ammountOFMoney = incomes - outcomes
-            if (ammountOFMoney < this.tabWithCars[i].cost) {
-                return "you are too poore for any of those cars"
-            } else if (ammountOFMoney == this.tabWithCars[i].cost) {
-                return " u can start looking for " + this.tabWithCars[i].name
+            if (ammountOFMoney == this.tabWithCars[i].cost) {
+                if (comunication !== "") {
+                    comunication += "\n or "
+                }
+                comunication += "u can start looking for " + this.tabWithCars[i].name
             } else if (ammountOFMoney > this.tabWithCars[i].cost) {
-                return " u can afford that " + this.tabWithCars[i].name
+                if (comunication !== "") {
+                    comunication += "\n or "
+                }
+                comunication += "u can afford that " + this.tabWithCars[i].name
             }
         }
+        if (comunication === "") {
+            comunication = "you are too poore for any of those cars"
+        }
+        return comunication
     }
+
 }
 const letDoThis = new howMuchCashUHave(9000, 3000)
 console.log(letDoThis.budget)
-console.log(letDoThis.canIAffortIt(7000, 3000))
+letDoThis.canIAffortIt(12000, 3000)
+console.log(letDoThis.budget)
