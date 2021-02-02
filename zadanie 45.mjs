@@ -3,7 +3,7 @@
 //klasa powinna miec metode naJakieAutoCieStac ktora pozwala wykorzystac budzet i  obliczyc czy stac Cie na dane auto 
 
 
-class howMuchCashUHave {
+class HowMuchCashUHave {
 
     constructor(incomes, outcomes) {
 
@@ -61,7 +61,7 @@ class howMuchCashUHave {
     }
 
 }
-const letDoThis = new howMuchCashUHave(9000, 3000)
+const checkIt = new howMuchCashUHave(9000, 3000)
 console.log(letDoThis.budget)
 letDoThis.canIAffortIt(12000, 3000)
 console.log(letDoThis.budget)
